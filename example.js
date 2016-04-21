@@ -6,6 +6,8 @@
 // with Object size
 */
 var objLength = function( obj ) {
+
+    var key;
     var size = 0;
 
     for ( key in obj ) {
@@ -27,7 +29,7 @@ var uniqueCharCount = function ( str ) {
 
     var letters = {};
 
-    for ( x = 0; x < str.length; x++ ) {
+    for ( var x = 0; x < str.length; x++ ) {
         var l = str.charAt( x );
 
         if ( isNaN( l ) ) {
@@ -71,7 +73,7 @@ var createNewWord = function ( str ) {
         var strLast  = str.charAt( str.length - 1 );
 
         // create string of characters that need unique count
-        for ( x = 1; x < str.length - 1; x++ ) {
+        for ( var x = 1; x < str.length - 1; x++ ) {
             strMiddleChars = strMiddleChars + str.charAt( x );
         }
 
@@ -144,24 +146,24 @@ var createNewString = function ( str ) {
 // test with different strings
 var strRaw    = "automotive";
 var newString = createNewString( strRaw );
-console.log( "newString1", newString );
+console.log( "initial string='"+strRaw+"'", "new string='"+newString+"'" );
 
 var strRaw    = "123";
 var newString = createNewString( strRaw );
-console.log( "newString2", newString );
+console.log( "initial string='"+strRaw+"'", "new string='"+newString+"'" );
 
 var strRaw    = "123automotive";
 var newString = createNewString( strRaw );
-console.log( "newString3", newString );
+console.log( "initial string='"+strRaw+"'", "new string='"+newString+"'" );
 
 var strRaw    = "automotive123";
 var newString = createNewString( strRaw );
-console.log( "newString4", newString );
+console.log( "initial string='"+strRaw+"'", "new string='"+newString+"'" );
 
 var strRaw    = "wx123yz";
 var newString = createNewString( strRaw );
-console.log( "newString5", newString );
+console.log( "initial string='"+strRaw+"'", "new string='"+newString+"'" );
 
 var strRaw    = "test!!Dealer**Track";
 var newString = createNewString( strRaw );
-console.log( "newString6", newString );
+console.log( "initial string='"+strRaw+"'", "new string='"+newString+"'" );
